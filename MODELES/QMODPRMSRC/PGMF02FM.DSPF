@@ -1,0 +1,206 @@
+000100200930     /* >>PRE-COMPILER<<                                                 */
+000200200930     /*   >>CRTCMD<<  CRTDSPF FILE(&LI/&OB) SRCFILE(&SL/&SF) +           */
+000300200930     /*                 SRCMBR(&SM);                                     */
+000400200930     /*   >>IMPORTANT<<                                                  */
+000500200930     /*     >>PARM<<  OPTION(*EVENTF);                                   */
+000600200930     /*     >>PARM<<  RSTDSP(*YES);                                      */
+000700200930     /*   >>END-IMPORTANT<<                                              */
+000800200930     /*   >>EXECUTE<<                                                    */
+000900200930     /* >>END-PRE-COMPILER<<                                             */
+001000200930     A                                      DSPSIZ(24 80 *DS3)
+001100200930     A                                      MSGLOC(24)
+001200200930     A                                      PRINT
+001300200930     A                                      HELP
+001400200930     A                                      HLPPNLGRP('PGMF02' PGMF02)
+001500200930     A                                      HLPTITLE('Détail personnel')
+001600200930     A                                      ALTHELP(CA01)
+001700200930     A                                      INDARA
+001800200930     A          R FORE1
+001900200930     A                                      CF03
+002000200930     A                                      CF04
+002100200930     A                                      CF12
+002200200930     A                                      CF15
+002300200930     A                                      RTNCSRLOC(&WFMCUR &WZOCUR &WPRCUR)
+002400200930     A                                      PUTOVR
+002500200930     A                                      CSRLOC(WNMLGN WNMCOL)
+002600200930     A                                      CHANGE(91)
+002700200930     A                                      HLPCLR
+002800200930     A          H                           HLPARA(5 19 5 29)
+002900200930     A                                      HLPPNLGRP('ZMATR' PGMF02)
+003000200930     A          H                           HLPARA(5 44 5 47)
+003100200930     A                                      HLPPNLGRP('ZFCOD' PGMF02)
+003200200930     A          H                           HLPARA(6 19 6 54)
+003300200930     A                                      HLPPNLGRP('ZNOM' PGMF02)
+003400200930     A          H                           HLPARA(7 19 7 54)
+003500200930     A                                      HLPPNLGRP('ZPR1' PGMF02)
+003600200930     A          H                           HLPARA(8 19 8 54)
+003700200930     A                                      HLPPNLGRP('ZPR2' PGMF02)
+003800200930     A          H                           HLPARA(9 19 9 54)
+003900200930     A                                      HLPPNLGRP('ZAD1' PGMF02)
+004000200930     A          H                           HLPARA(10 19 10 54)
+004100200930     A                                      HLPPNLGRP('ZAD2' PGMF02)
+004200200930     A          H                           HLPARA(11 19 11 54)
+004300200930     A                                      HLPPNLGRP('ZAD3' PGMF02)
+004400200930     A          H                           HLPARA(12 19 12 29)
+004500200930     A                                      HLPPNLGRP('ZCPO' PGMF02)
+004600200930     A          H                           HLPARA(13 19 13 54)
+004700200930     A                                      HLPPNLGRP('ZVIL' PGMF02)
+004800200930     A          H                           HLPARA(14 19 14 39)
+004900200930     A                                      HLPPNLGRP('ZTEL' PGMF02)
+005000200930     A          H                           HLPARA(14 52 14 72)
+005100200930     A                                      HLPPNLGRP('ZPOR' PGMF02)
+005200200930     A          H                           HLPARA(16 19 16 29)
+005300200930     A                                      HLPPNLGRP('ZDAE' PGMF02)
+005400200930     A          H                           HLPARA(16 48 16 58)
+005500200930     A                                      HLPPNLGRP('ZDAS' PGMF02)
+005600200930     A            ZPGM          10   O  1  2
+005700200930     A                                      OVRDTA
+005800200930     A                                  1 31'Détail fiche personnel'
+005900200930     A                                      COLOR(WHT)
+006000200930     A            ZUSER         10   O  1 70
+006100200930     A                                      OVRDTA
+006200200930     A            ZDATE           L  O  2  2DATFMT(*EUR) OVRDTA
+006300200930     A            ZHEUR           T  O  2 13TIMFMT(*EUR) OVRDTA
+006400200930     A            ZMODE         30   O  2 27
+006500200930     A                                      COLOR(WHT)
+006600200930     A                                      OVRDTA
+006700200930     A            ZJOB          10   O  2 70
+006800200930     A                                      OVRDTA
+006900200930     A                                  5  7'Matricule :'
+007000200930     A            ZMATR         10Y 0   5 19
+007100200930     A                                      EDTCDE(Z)
+007200200930     A                                      COLOR(WHT)
+007300200930     A                                      OVRDTA
+007400200930     A                                  5 33'Fonction :'
+007500200930     A            ZFCOD          3   B  5 44
+007600200930     A N14                                  DSPATR(UL)
+007700200930     A  14                                  DSPATR(PR)
+007800200930     A                                      COLOR(WHT)
+007900200930     A                                      OVRDTA
+008000200930     A                                      OVRATR
+008100200930     A            ZFLIB         20   O  5 49
+008200200930     A                                      OVRDTA
+008300200930     A                                  6 13'Nom :'
+008400200930     A            ZNOM          35   B  6 19
+008500200930     A N15                                  DSPATR(UL)
+008600200930     A  15                                  DSPATR(PR)
+008700200930     A                                      CHECK(LC)
+008800200930     A                                      COLOR(WHT)
+008900200930     A                                      OVRDTA
+009000200930     A                                      OVRATR
+009100200930     A                                  7 10'Prénom :'
+009200200930     A            ZPR1          35   B  7 19
+009300200930     A N16                                  DSPATR(UL)
+009400200930     A  16                                  DSPATR(PR)
+009500200930     A                                      CHECK(LC)
+009600200930     A                                      COLOR(WHT)
+009700200930     A                                      OVRDTA
+009800200930     A                                      OVRATR
+009900200930     A            ZPR2          35   B  8 19
+010000200930     A N16                                  DSPATR(UL)
+010100200930     A  16                                  DSPATR(PR)
+010200200930     A                                      CHECK(LC)
+010300200930     A                                      COLOR(WHT)
+010400200930     A                                      OVRDTA
+010500200930     A                                      OVRATR
+010600200930     A                                  9  9'Adresse :'
+010700200930     A            ZAD1          35   B  9 19
+010800200930     A N16                                  DSPATR(UL)
+010900200930     A  16                                  DSPATR(PR)
+011000200930     A                                      CHECK(LC)
+011100200930     A                                      COLOR(WHT)
+011200200930     A                                      OVRDTA
+011300200930     A                                      OVRATR
+011400200930     A            ZAD2          35   B 10 19
+011500200930     A N16                                  DSPATR(UL)
+011600200930     A  16                                  DSPATR(PR)
+011700200930     A                                      CHECK(LC)
+011800200930     A                                      COLOR(WHT)
+011900200930     A                                      OVRDTA
+012000200930     A                                      OVRATR
+012100200930     A            ZAD3          35   B 11 19
+012200200930     A N16                                  DSPATR(UL)
+012300200930     A  16                                  DSPATR(PR)
+012400200930     A                                      CHECK(LC)
+012500200930     A                                      COLOR(WHT)
+012600200930     A                                      OVRDTA
+012700200930     A                                      OVRATR
+012800200930     A                                 12  5'Code postal :'
+012900200930     A            ZCPO          10   B 12 19
+013000200930     A N16                                  DSPATR(UL)
+013100200930     A  16                                  DSPATR(PR)
+013200200930     A                                      COLOR(WHT)
+013300200930     A                                      OVRDTA
+013400200930     A                                      OVRATR
+013500200930     A                                 13 11'Ville :'
+013600200930     A            ZVIL          35   B 13 19
+013700200930     A N16                                  DSPATR(UL)
+013800200930     A  16                                  DSPATR(PR)
+013900200930     A                                      CHECK(LC)
+014000200930     A                                      COLOR(WHT)
+014100200930     A                                      OVRDTA
+014200200930     A                                      OVRATR
+014300200930     A                                 14  7'Téléphone :'
+014400200930     A            ZTEL          20   B 14 19
+014500200930     A N16                                  DSPATR(UL)
+014600200930     A  16                                  DSPATR(PR)
+014700200930     A                                      COLOR(WHT)
+014800200930     A                                      OVRDTA
+014900200930     A                                      OVRATR
+015000200930     A                                 14 41'Portable :'
+015100200930     A            ZPOR          20   B 14 52
+015200200930     A N16                                  DSPATR(UL)
+015300200930     A  16                                  DSPATR(PR)
+015400200930     A                                      COLOR(WHT)
+015500200930     A                                      OVRDTA
+015600200930     A                                      OVRATR
+015700200930     A                                 16  3'Date d''entrée :'
+015800200930     A                                 16 31'Date de départ :'
+015900200930     A                                 18 13'Crée le :'
+016000200930     A            ZDAC            L  O 18 25
+016100200930     A                                      COLOR(GRN)
+016200200930     A                                      OVRDTA
+016300200930     A                                      DATFMT(*EUR)
+016400200930     A                                 18 37'à :'
+016500200930     A            ZHEC            T  O 18 41
+016600200930     A                                      OVRDTA
+016700200930     A                                      TIMFMT(*EUR)
+016800200930     A                                 18 51'par :'
+016900200930     A            ZUSC          10   O 18 57
+017000200930     A                                      OVRDTA
+017100200930     A                                 19 10'Modifié le :'
+017200200930     A            ZDAM            L  O 19 25
+017300200930     A                                      COLOR(GRN)
+017400200930     A                                      DATFMT(*EUR)
+017500200930     A                                      OVRDTA
+017600200930     A                                 19 37'à :'
+017700200930     A            ZHEM            T  O 19 41
+017800200930     A                                      TIMFMT(*EUR)
+017900200930     A                                      OVRDTA
+018000200930     A                                 19 51'par :'
+018100200930     A            ZUSM          10   O 19 57
+018200200930     A                                      OVRDTA
+018300200930     A                                 23  3'F3=Exit   F4=Invite  F12=Annuler'
+018400200930     A                                      COLOR(BLU)
+018500200930     A            WFMCUR        10A  H
+018600200930     A            WZOCUR        10A  H
+018700200930     A            WPRCUR         4S 0H
+018800200930     A            WNMLGN         3S 0H
+018900200930     A            WNMCOL         3S 0H
+019000200930     A            ZDAE            L  B 16 20DATFMT(*EUR)
+019100200930     A                                      COLOR(WHT)
+019200200930     A            ZDAS            L  B 16 49DATFMT(*EUR)
+019300200930     A                                      COLOR(WHT)
+019400200930     A          R WMGSFL                    SFL
+019500200930     A                                      SFLMSGRCD(24)
+019600200930     A            WMGKEY                    SFLMSGKEY
+019700200930     A            WPGMQ                     SFLPGMQ
+019800200930     A          R WMGCTL                    SFLCTL(WMGSFL)
+019900200930     A                                      SFLSIZ(2)
+020000200930     A                                      SFLPAG(1)
+020100200930     A                                      OVERLAY
+020200200930     A  10                                  SFLINZ
+020300200930     A                                      SFLDSP
+020400200930     A                                      SFLDSPCTL
+020500200930     A  09                                  SFLEND
+020600200930     A            WPGMQ                     SFLPGMQ

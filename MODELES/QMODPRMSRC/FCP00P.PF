@@ -1,0 +1,23 @@
+000100200930     A*******************************************************
+000200200930     A* Compteur                                            *
+000300200930     A*                                                     *
+000400200930     A*******************************************************
+000500200930     A          R FCPF                      TEXT('Compteur')
+000600200930     A            CPCOD          3          TEXT('Code Compteur')
+000700200930     A                                      COLHDG('Code')
+000800200930     A            CPCP1          6S 0       TEXT('Compteur 1')
+000900200930     A                                      COLHDG('Compteur 1')
+001000200930     A            CPCP2         10S 0       TEXT('Compteur 2')
+001100200930     A                                      COLHDG('Compteur 2')
+001200200930     A            CPDAC          8S 0       TEXT('Date de création')
+001300200930     A                                      COLHDG('Date création')
+001400200930     A            CPHEC          6S 0       TEXT('Heure de création')
+001500200930     A                                      COLHDG('heure')
+001600200930     A            CPUSC         10          TEXT('User création')
+001700200930     A                                      COLHDG('User')
+001800200930     A            CPDAM          8S 0       TEXT('Date modif')
+001900200930     A                                      COLHDG('Date modif')
+002000200930     A            CPHEM          6S 0       TEXT('Heure modif')
+002100200930     A                                      COLHDG('heure')
+002200200930     A            CPUSM         10          TEXT('User modif')
+002300200930     A                                      COLHDG('User modif')

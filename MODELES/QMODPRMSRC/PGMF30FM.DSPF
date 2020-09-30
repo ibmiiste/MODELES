@@ -1,0 +1,96 @@
+000100200930     A                                      DSPSIZ(24 80 *DS3)
+000200200930     A                                      MSGLOC(24)
+000300200930     A                                      PRINT
+000400200930     A                                      HELP
+000500200930     A                                      HLPPNLGRP('PGMF30' PGMF30)
+000600200930     A                                      HLPTITLE('Liste outq')
+000700200930     A                                      ALTHELP(CA01)
+000800200930     A          R SFL01                     SFL
+000900200930     A  08                                  SFLNXTCHG
+001000200930     A            ZMUSR         10   B  8  6
+001100200930     A                                      COLOR(GRN)
+001200200930     A            ZMDOC         10   B  8 17
+001300200930     A                                      COLOR(GRN)
+001400200930     A            ZMPRT         10   B  8 28
+001500200930     A                                      COLOR(GRN)
+001600200930     A            HNREC         10  0H
+001700200930     A          R FORE1                     SFLCTL(SFL01)
+001800200930     A                                      RTNCSRLOC(&WLICSR &WZOCSR &WPRCSR)
+001900200930     A                                      OVERLAY
+002000200930     A                                      PUTOVR
+002100200930     A N07                                  ROLLUP(02)
+002200200930     A                                      CSRLOC(WLIGN WCOLN)
+002300200930     A                                      CHANGE(91)
+002400200930     A N04                                  ERASE(SFL01)
+002500200930     A  04                                  SFLDSP
+002600200930     A  05                                  SFLDSPCTL
+002700200930     A  06                                  SFLCLR
+002800200930     A  07                                  SFLEND
+002900200930     A                                      SFLSIZ(15)
+003000200930     A                                      SFLPAG(14)
+003100200930     A                                      SFLCSRRRN(&WRACSR)
+003200200930     A            WRACSR         5S 0H
+003300200930     A            WRAN01         4S 0H      SFLRCDNBR
+003400200930     A            ZPGM          10   O  1  2
+003500200930     A                                      OVRDTA
+003600200930     A                                  1 31'Liste des Imprimantes'
+003700200930     A                                      COLOR(WHT)
+003800200930     A            ZUSER         10   O  1 70
+003900200930     A                                      OVRDTA
+004000200930     A            ZDATE          8  0O  2  2
+004100200930     A                                      EDTWRD('  /  /    ')
+004200200930     A                                      OVRDTA
+004300200930     A            ZHEUR          6  0O  2 14
+004400200930     A                                      EDTWRD('  :  :  ')
+004500200930     A                                      OVRDTA
+004600200930     A            ZJOB          10   O  2 70
+004700200930     A                                      OVRDTA
+004800200930     A                                  5  2'Selection User/Doc/Print :'
+004900200930     A            ZSUSR         10   B  5 29
+005000200930     A                                      COLOR(WHT)
+005100200930     A                                      OVRDTA
+005200200930     A            ZSDOC         10   B  5 40
+005300200930     A                                      COLOR(WHT)
+005400200930     A                                      OVRDTA
+005500200930     A            ZSPRT         10   B  5 51
+005600200930     A                                      COLOR(WHT)
+005700200930     A                                      OVRDTA
+005800200930     A                                  7  2'    User       Document   Impriman-
+005900200930     A                                      te                                 -
+006000200930     A                                                '
+006100200930     A                                      COLOR(WHT)
+006200200930     A            WLICSR        10A  H
+006300200930     A            WZOCSR        10A  H
+006400200930     A            WPRCSR         4S 0H
+006500200930     A            WLIGN          3S 0H
+006600200930     A            WCOLN          3S 0H
+006700200930     A          R FORB1
+006800200930     A                                      CF03
+006900200930     A                                      CF06
+007000200930     A                                      CF15
+007100200930     A                                      RTNCSRLOC(&WLICSR &WZOCSR &WPRCSR)
+007200200930     A                                      OVERLAY
+007300200930     A                                      PUTOVR
+007400200930     A                                      CSRLOC(WLIGN WCOLN)
+007500200930     A                                      CHANGE(91)
+007600200930     A                                 23  3'F3=Exit     F6=Créer     F15=Netto-
+007700200930     A                                      yage'
+007800200930     A                                      COLOR(BLU)
+007900200930     A            WLICSR        10A  H
+008000200930     A            WZOCSR        10A  H
+008100200930     A            WPRCSR         4S 0H
+008200200930     A            WLIGN          3S 0H
+008300200930     A            WCOLN          3S 0H
+008400200930     A          R WSFMSG                    SFL
+008500200930     A                                      SFLMSGRCD(24)
+008600200930     A            WMGKEY                    SFLMSGKEY
+008700200930     A            WPGMQ                     SFLPGMQ
+008800200930     A          R WSFCTL                    SFLCTL(WSFMSG)
+008900200930     A                                      SFLSIZ(2)
+009000200930     A                                      SFLPAG(1)
+009100200930     A                                      OVERLAY
+009200200930     A  10                                  SFLINZ
+009300200930     A                                      SFLDSP
+009400200930     A                                      SFLDSPCTL
+009500200930     A  09                                  SFLEND
+009600200930     A            WPGMQ                     SFLPGMQ

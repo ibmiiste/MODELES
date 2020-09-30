@@ -1,0 +1,109 @@
+000100200930     A                                      DSPSIZ(24 80 *DS3)
+000200200930     A                                      MSGLOC(24)
+000300200930     A                                      PRINT
+000400200930     A                                      HELP
+000500200930     A                                      HLPPNLGRP('PGMF01' PGMF01)
+000600200930     A                                      HLPTITLE('Aide générale -
+000700200930     A                                      sur PGMF01')
+000800200930     A                                      ALTHELP(CA01)
+000900200930     A                                      INDARA
+001000200930     A          R SFL01                     SFL
+001100200930     A  08                                  SFLNXTCHG
+001200200930     A            ZOPT           2   B  8  2
+001300200930     A  20                                  DSPATR(PR)
+001400200930     A            ZNOM          35   O  8  6
+001500200930     A  30                                  COLOR(RED)
+001600200930     A            ZPR1          10   O  8 42
+001700200930     A            ZFONC         10   O  8 53
+001800200930     A            ZMATR         10  0O  8 64
+001900200930     A                                      EDTCDE(Z)
+002000200930     A            ZCPO           5   O  8 75
+002100200930     A            HNREC         10  0H
+002200200930     A            HTOUT          1   H
+002300200930     A            HMATR         10  0H
+002400200930     A          R FORE1                     SFLCTL(SFL01)
+002500200930     A                                      RTNCSRLOC(&WLICSR &WZOCSR &WPRCSR)
+002600200930     A                                      OVERLAY
+002700200930     A                                      PUTOVR
+002800200930     A N07                                  ROLLUP(02)
+002900200930     A                                      CSRLOC(WLIGN WCOLN)
+003000200930     A                                      CHANGE(91)
+003100200930     A N04                                  ERASE(SFL01)
+003200200930     A  04                                  SFLDSP
+003300200930     A  05                                  SFLDSPCTL
+003400200930     A  06                                  SFLCLR
+003500200930     A  07                                  SFLEND
+003600200930     A                                      SFLSIZ(15)
+003700200930     A                                      SFLPAG(14)
+003800200930     A                                      SFLCSRRRN(&WRACSR)
+003900200930     A            WRACSR         5S 0H
+004000200930     A            WRAN01         4S 0H      SFLRCDNBR
+004100200930     A            ZPGM          10   O  1  2
+004200200930     A                                      OVRDTA
+004300200930     A                                  1 31'Liste du personnel'
+004400200930     A                                      COLOR(WHT)
+004500200930     A            ZUSER         10   O  1 70
+004600200930     A                                      OVRDTA
+004700200930     A            ZJOB          10   O  2 70
+004800200930     A                                      OVRDTA
+004900200930     A                                  4  3'Indiquez vos options, puis appuyez-
+005000200930     A                                       sur ENTREE.'
+005100200930     A                                      COLOR(BLU)
+005200200930     A                                  5  3'2=Modifier  3=Copier -
+005300200930     A                                      4=Supprimer   5=Afficher  -
+005400200930     A                                      6=Imprimer  99=Fin de contrat'
+005500200930     A                                      COLOR(BLU)
+005600200930     A                                  6  3'Selection par nom :'
+005700200930     A            ZSNOM         35   B  6 23
+005800200930     A                                      CHECK(LC)
+005900200930     A                                      COLOR(WHT)
+006000200930     A                                      OVRDTA
+006100200930     A                                  7  2'Opt Nom                           -
+006200200930     A                                            Prénom     Fonction   Matricu-
+006300200930     A                                      le  CP'
+006400200930     A                                      COLOR(WHT)
+006500200930     A            WLICSR        10A  H
+006600200930     A            WZOCSR        10A  H
+006700200930     A            WPRCSR         4S 0H
+006800200930     A            WLIGN          3S 0H
+006900200930     A            WCOLN          3S 0H
+007000200930     A            ZDATE           L  O  2  2DATFMT(*EUR) OVRDTA
+007100200930     A            ZHEUR           T  O  2 13TIMFMT(*EUR) OVRDTA
+007200200930     A          R FORB1
+007300200930     A                                      CF03
+007400200930     A                                      CF05
+007500200930     A                                      CF06
+007600200930     A                                      CF08
+007700200930     A                                      CF12
+007800200930     A                                      RTNCSRLOC(&WLICSR &WZOCSR &WPRCSR)
+007900200930     A                                      OVERLAY
+008000200930     A                                      PUTOVR
+008100200930     A                                      CSRLOC(WLIGN WCOLN)
+008200200930     A                                      CHANGE(91)
+008300200930     A                                      HLPCLR
+008400200930     A          H                           HLPARA(6 23 6 58)
+008500200930     A                                      HLPPNLGRP('ZSNOM' PGMF01)
+008600200930     A          H                           HLPARA(8 2 22 3)
+008700200930     A                                      HLPPNLGRP('ZOPT' PGMF01)
+008800200930     A                                 23  3'F3=Exit  F5=Réafficher  -
+008900200930     A                                      F6=Créer  F8=Imprimer  -
+009000200930     A                                      F12=Annuler'
+009100200930     A                                      COLOR(BLU)
+009200200930     A            WLICSR        10A  H
+009300200930     A            WZOCSR        10A  H
+009400200930     A            WPRCSR         4S 0H
+009500200930     A            WLIGN          3S 0H
+009600200930     A            WCOLN          3S 0H
+009700200930     A          R WSFMSG                    SFL
+009800200930     A                                      SFLMSGRCD(24)
+009900200930     A            WMGKEY                    SFLMSGKEY
+010000200930     A            WPGMQ                     SFLPGMQ
+010100200930     A          R WSFCTL                    SFLCTL(WSFMSG)
+010200200930     A                                      SFLSIZ(2)
+010300200930     A                                      SFLPAG(1)
+010400200930     A                                      OVERLAY
+010500200930     A  10                                  SFLINZ
+010600200930     A                                      SFLDSP
+010700200930     A                                      SFLDSPCTL
+010800200930     A  09                                  SFLEND
+010900200930     A            WPGMQ                     SFLPGMQ

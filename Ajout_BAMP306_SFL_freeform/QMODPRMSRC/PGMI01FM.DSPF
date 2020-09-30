@@ -1,0 +1,89 @@
+000100200930     A                                      DSPSIZ(24 80 *DS3)
+000200200930     A                                      MSGLOC(24)
+000300200930     A                                      PRINT
+000400200930     A                                      HELP
+000500200930     A                                      HLPPNLGRP('PGMI01' PGMI01)
+000600200930     A                                      HLPTITLE('Invite sur fonction')
+000700200930     A                                      ALTHELP(CA01)
+000800200930     A                                      CHECK(RLTB)
+000900200930     A          R FO0001
+001000200930     A                                      KEEP
+001100200930     A                                      ASSUME
+001200200930     A                                      PUTOVR
+001300200930     A                                 24 80' '
+001400200930     A          R SFL01                     SFL
+001500200930     A  08                                  SFLNXTCHG
+001600200930     A            ZOPT           1A  B  4  1
+001700200930     A N13                                  DSPATR(UL)
+001800200930     A  13                                  DSPATR(PR)
+001900200930     A                                      COLOR(WHT)
+002000200930     A            ZFCT           3A  O  4  3
+002100200930     A            ZLIB          35A  O  4  8
+002200200930     A            HNUMREC        8S 0H
+002300200930     A          R FORE1                     SFLCTL(SFL01)
+002400200930     A N07                                  ROLLUP(02)
+002500200930     A                                      CHANGE(91)
+002600200930     A                                      KEEP
+002700200930     A                                      RTNCSRLOC(&WLICSR &WZOCSR &WPRCSR)
+002800200930     A                                      CSRLOC(WLIGN      WCOLN)
+002900200930     A                                      OVERLAY
+003000200930     A                                      PUTOVR
+003100200930     A N04                                  ERASE(SFL01)
+003200200930     A                                      SFLCSRRRN(&WRACSR)
+003300200930     A  04                                  SFLDSP
+003400200930     A  05                                  SFLDSPCTL
+003500200930     A  06                                  SFLCLR
+003600200930     A  07                                  SFLEND
+003700200930     A                                      SFLSIZ(0013)
+003800200930     A                                      SFLPAG(0012)
+003900200930     A                                      WINDOW(&WINLIG &WINCOL 17 42 *NOMSG-
+004000200930     A                                      LIN)
+004100200930     A                                      WDWBORDER((*COLOR TRQ) (*DSPATR RI)-
+004200200930     A                                       (*CHAR '        '))
+004300200930     A N11                                  USRRSTDSP
+004400200930     A            WRACSR         5S 0H
+004500200930     A            WRAN01         4S 0H      SFLRCDNBR
+004600200930     A            ZPGM          10A  O  1  1OVRDTA
+004700200930     A                                  1 16'Liste des Fonctions'
+004800200930     A                                      COLOR(WHT)
+004900200930     A                                  2  1'1=Choisir'
+005000200930     A                                      COLOR(BLU)
+005100200930     A  13                                  DSPATR(ND)
+005200200930     A                                  3  1'O Code Libellé'
+005300200930     A                                      COLOR(WHT)
+005400200930     A            WLICSR        10A  H
+005500200930     A            WZOCSR        10A  H
+005600200930     A            WPRCSR         4S 0H
+005700200930     A            WLIGN          3S 0H
+005800200930     A            WCOLN          3S 0H
+005900200930     A            WINLIG         2S 0P
+006000200930     A            WINCOL         3S 0P
+006100200930     A          R FORB1
+006200200930     A                                      WINDOW(FORE1)
+006300200930     A                                      CF03
+006400200930     A                                      CF12
+006500200930     A                                      RTNCSRLOC(&WLICSR &WZOCSR &WPRCSR)
+006600200930     A                                      OVERLAY
+006700200930     A                                      PUTOVR
+006800200930     A                                      CSRLOC(WLIGN      WCOLN)
+006900200930     A                                      CHANGE(91)
+007000200930     A                                 17  1'F3=Exit     F12=Précédent'
+007100200930     A                                      COLOR(BLU)
+007200200930     A            WLICSR        10A  H
+007300200930     A            WZOCSR        10A  H
+007400200930     A            WPRCSR         4S 0H
+007500200930     A            WLIGN          3S 0H
+007600200930     A            WCOLN          3S 0H
+007700200930     A          R WSFMSG                    SFL
+007800200930     A                                      SFLMSGRCD(24)
+007900200930     A            WMGKEY                    SFLMSGKEY
+008000200930     A            WPGMQ                     SFLPGMQ
+008100200930     A          R WSFCTL                    SFLCTL(WSFMSG)
+008200200930     A                                      SFLSIZ(2)
+008300200930     A                                      SFLPAG(1)
+008400200930     A                                      OVERLAY
+008500200930     A  10                                  SFLINZ
+008600200930     A                                      SFLDSP
+008700200930     A                                      SFLDSPCTL
+008800200930     A  09                                  SFLEND
+008900200930     A            WPGMQ                     SFLPGMQ

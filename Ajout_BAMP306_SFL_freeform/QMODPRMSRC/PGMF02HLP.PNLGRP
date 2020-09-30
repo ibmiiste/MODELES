@@ -1,0 +1,94 @@
+000100200930:PNLGRP.
+000200200930:HELP NAME = 'PGMF02' .Aide étendue.
+000300200930:XH1.Ecran PGMF02.
+000400200930:P.
+000500200930Cet écran permet d'éditer les données d'un employé.
+000600200930:P.
+000700200930En mode création, le numéro de matricule sera calculé.
+000800200930:P.
+000900200930Les seules zones obligaroires sont le nom et la fonction.
+001000200930La date d'entrée sera, par défaut, la date du jour de saisie.
+001100200930:P.
+001200200930Les touches de fonction.
+001300200930:UL.
+001400200930:LI. F3 et F12 pour quitter le programme.
+001500200930:LI. F4 invite sur la fonction.
+001600200930:LI. F15 valide la suppression d'un enregistrement.
+001700200930:EUL.
+001800200930:EHELP.
+001900200930:HELP NAME = 'ZMATR' .PGMF02.
+002000200930:H1.Matricule.
+002100200930:P.
+002200200930Le numéro de matricule est calculé automatiquement lors de la création.
+002300200930Aucune modification n'est admise.
+002400200930:EHELP.
+002500200930:HELP NAME = 'ZFCOD'.PGMF02.
+002600200930:H1.Code fonction.
+002700200930:P.
+002800200930Ce code est obligatoire et doit correspondre à un code existant.
+002900200930:EHELP.
+003000200930:HELP NAME = 'ZNOM'.PGMF02.
+003100200930:H1.Nom de l'employé.
+003200200930:P.
+003300200930Cette zone est obligatoire.
+003400200930:EHELP.
+003500200930:HELP NAME = 'ZPR1'.PGMF02.
+003600200930:H1.Prénom.
+003700200930:P.
+003800200930Zone facultative. Ne saisir qu'un seul prénom.
+003900200930:EHELP.
+004000200930:HELP NAME = 'ZPR2'.PGMF02.
+004100200930:H1.Autres prénoms.
+004200200930:P.
+004300200930Zone facultative. On peut saisir plusieurs prénoms,
+004400200930séparés par une virgule.
+004500200930:EHELP.
+004600200930:HELP NAME = 'ZAD1'.PGMF02.
+004700200930:H1.Adresse 1.
+004800200930:P.
+004900200930Zone obligatoire. Modification autorisée.
+005000200930:EHELP.
+005100200930:HELP NAME = 'ZAD2'.PGMF02.
+005200200930:H1.Adresse 2.
+005300200930:P.
+005400200930Zone facultative.
+005500200930:EHELP.
+005600200930:HELP NAME = 'ZAD3'.PGMF02.
+005700200930:H1.Adresse 3.
+005800200930:P.
+005900200930Zone facultative.
+006000200930:EHELP.
+006100200930:HELP NAME = 'ZCPO'.PGMF02.
+006200200930:H1.Code postal.
+006300200930:P.
+006400200930Zone recommandée. Il n'y a pas de contrôle.
+006500200930:EHELP.
+006600200930:HELP NAME = 'ZVIL'.PGMF02.
+006700200930:H1.Ville.
+006800200930:P.
+006900200930Zone recommandée. Il n'y a pas de contrôle.
+007000200930:EHELP.
+007100200930:HELP NAME = 'ZTEL'.PGMF02.
+007200200930:H1.Téléphone.
+007300200930:P.
+007400200930Zone recommandée. Il n'y a pas de contrôle.
+007500200930:EHELP.
+007600200930:HELP NAME = 'ZPOR'.PGMF02.
+007700200930:H1.Portable.
+007800200930:P.
+007900200930Zone recommandée. Il n'y a pas de contrôle.
+008000200930Mais il vaut mieux saisir en cas d'urgence.
+008100200930:EHELP.
+008200200930:HELP NAME = 'ZDAE'.PGMF02.
+008300200930:H1.Date d'entrée dans la société.
+008400200930:P.
+008500200930Zone obligatoire. Il n'y a pas de contrôle en cas de saisie
+008600200930par défaut c'est la date du jour.
+008700200930:EHELP.
+008800200930:HELP NAME = 'ZDAS'.PGMF02.
+008900200930:H1.Date de sortie de la société.
+009000200930:P.
+009100200930Zone obligatoire lors du licenciement.
+009200200930Ou de fin de contrat.
+009300200930:EHELP.
+009400200930:EPNLGRP.

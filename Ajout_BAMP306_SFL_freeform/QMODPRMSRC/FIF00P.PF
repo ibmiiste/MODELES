@@ -1,0 +1,17 @@
+000100200930     A*******************************************************
+000200200930     A* Fichier fonction                                    *
+000300200930     A*                                                     *
+000400200930     A*******************************************************
+000500200930     A          R FIFF                      TEXT('Fichier fonction')
+000600200930     A            MIFON          3          TEXT('Fonction')
+000700200930     A                                      COLHDG('Fonction')
+000800200930     A            MILIB         35          TEXT('Libellé')
+000900200930     A                                      COLHDG('Libellé fonction')
+001000200930     A            MITSC         26          TEXT('Time stamp création')
+001100200930     A                                      COLHDG('Création')
+001200200930     A            MIUSC         10          TEXT('User création')
+001300200930     A                                      COLHDG('User création')
+001400200930     A            MITSM         26          TEXT('Time stamp modif')
+001500200930     A                                      COLHDG('Modif')
+001600200930     A            MIUSM         10          TEXT('User modif')
+001700200930     A                                      COLHDG('User modif')

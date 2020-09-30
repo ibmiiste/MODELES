@@ -1,0 +1,47 @@
+000100200930:PNLGRP.
+000200200930:HELP NAME = 'PGMF01' .Aide étendue.
+000300200930:XH1.Ecran PGMF01.
+000400200930:P.
+000500200930Cet écran donne la liste des employés.
+000600200930:P.
+000700200930Les options
+000800200930:OL.
+000900200930:LI. Le choix 2 permet de modifier la fiche employé.
+001000200930:LI. Le choix 3 permet de créer une copie.
+001100200930:LI. Le choix 4 permet de supprimer une fiche, opération irrémédiable.
+001200200930:LI. Le choix 5 permet de visualiser une fiche.
+001300200930:LI. Le choix 6 lance l'édition d'une fiche. Routage sur imprimante.
+001400200930:LI. Le choix 99 est utilisé lorsqu'un employé quitte l'entreprise.
+001500200930:EOL.
+001600200930:P.
+001700200930Les touches de fonction.
+001800200930:UL.
+001900200930:LI. F3 et F12 pour quitter le programme.
+002000200930:LI. F5 fait un réaffichage de la liste.
+002100200930:LI. F6 permet de créer une fiche employé.
+002200200930:LI. F8 lance l'édition de toute la liste.
+002300200930:EUL.
+002400200930:P.
+002500200930Selection par nom.
+002600200930:P.
+002700200930Saisir un nom complet, ou une partie en terminant par *.
+002800200930Les majuscules et minuscules sont prises en compte.
+002900200930:EHELP.
+003000200930:HELP NAME = 'ZSNOM' .PGMF01.
+003100200930:H1.Sélection.
+003200200930:P.
+003300200930Saisir le nom de l'employé recherché, ou le début d'un nom en terminant
+003400200930par '*'.
+003500200930:XMP. Si la recherche n'a pas abouti, Sélection vide sera affiché.
+003600200930:EXMP.
+003700200930:EHELP.
+003800200930:HELP NAME = 'ZOPT' .PGMF01.
+003900200930:H1.Options.
+004000200930:P.
+004100200930Saisir une option devant la ligne choisie.
+004200200930Il est possible de saisir des options sur plusieurs ligne.
+004300200930Elles seront exécutées succesivement.
+004400200930:P.
+004500200930Si l'option n'existe pas, un message s'affichera.
+004600200930:EHELP.
+004700200930:EPNLGRP.

@@ -1,0 +1,91 @@
+000100200930     A                                      DSPSIZ(24 80 *DS3)
+000200200930     A                                      MSGLOC(24)
+000300200930     A                                      PRINT
+000400200930     A                                      HELP
+000500200930     A                                      HLPPNLGRP('XX' XX)
+000600200930     A                                      HLPTITLE('Détail fonction')
+000700200930     A                                      ALTHELP(CA01)
+000800200930     A          R FORE1
+000900200930     A                                      CF03
+001000200930     A                                      CF12
+001100200930     A                                      CF15
+001200200930     A                                      RTNCSRLOC(&WFMCUR &WZOCUR &WPRCUR)
+001300200930     A                                      PUTOVR
+001400200930     A                                      CSRLOC(WNMLGN WNMCOL)
+001500200930     A                                      CHANGE(91)
+001600200930     A            ZPGM          10   O  1  2
+001700200930     A                                      OVRDTA
+001800200930     A                                  1 31'Détail fonction'
+001900200930     A                                      COLOR(WHT)
+002000200930     A            ZUSER         10   O  1 70
+002100200930     A                                      OVRDTA
+002200200930     A            ZDATE          8  0O  2  2
+002300200930     A                                      EDTWRD('  /  /    ')
+002400200930     A                                      OVRDTA
+002500200930     A            ZHEUR          6  0O  2 14
+002600200930     A                                      EDTWRD('  :  :  ')
+002700200930     A                                      OVRDTA
+002800200930     A            ZMODE         30   O  2 27
+002900200930     A                                      COLOR(WHT)
+003000200930     A                                      OVRDTA
+003100200930     A            ZJOB          10   O  2 70
+003200200930     A                                      OVRDTA
+003300200930     A                                  6 15'Fonction :'
+003400200930     A            ZFCOD          3   B  6 27
+003500200930     A  12                                  DSPATR(UL)
+003600200930     A N12                                  DSPATR(PR)
+003700200930     A                                      COLOR(WHT)
+003800200930     A                                      OVRDTA
+003900200930     A                                      OVRATR
+004000200930     A                                  7 16'Libellé :'
+004100200930     A            ZFLIB         35   B  7 27
+004200200930     A  13                                  DSPATR(UL)
+004300200930     A N13                                  DSPATR(PR)
+004400200930     A                                      CHECK(LC)
+004500200930     A                                      COLOR(WHT)
+004600200930     A                                      OVRDTA
+004700200930     A                                      OVRATR
+004800200930     A                                 18 13'Crée le :'
+004900200930     A            ZDAC           8  0O 18 25
+005000200930     A                                      EDTWRD('  /  /    ')
+005100200930     A                                      COLOR(GRN)
+005200200930     A                                      OVRDTA
+005300200930     A                                 18 37'à :'
+005400200930     A            ZHEC           6  0O 18 41
+005500200930     A                                      EDTWRD('  :  :  ')
+005600200930     A                                      OVRDTA
+005700200930     A                                 18 51'par :'
+005800200930     A            ZUSC          10   O 18 57
+005900200930     A                                      OVRDTA
+006000200930     A                                 19 10'Modifié le :'
+006100200930     A            ZDAM           8  0O 19 25
+006200200930     A                                      EDTWRD('  /  /    ')
+006300200930     A                                      COLOR(GRN)
+006400200930     A                                      OVRDTA
+006500200930     A                                 19 37'à :'
+006600200930     A            ZHEM           6  0O 19 41
+006700200930     A                                      EDTWRD('  :  :  ')
+006800200930     A                                      OVRDTA
+006900200930     A                                 19 51'par :'
+007000200930     A            ZUSM          10   O 19 57
+007100200930     A                                      OVRDTA
+007200200930     A                                 23  3'F3=Exit   F12=Annuler'
+007300200930     A                                      COLOR(BLU)
+007400200930     A            WFMCUR        10A  H
+007500200930     A            WZOCUR        10A  H
+007600200930     A            WPRCUR         4S 0H
+007700200930     A            WNMLGN         3S 0H
+007800200930     A            WNMCOL         3S 0H
+007900200930     A          R WMGSFL                    SFL
+008000200930     A                                      SFLMSGRCD(24)
+008100200930     A            WMGKEY                    SFLMSGKEY
+008200200930     A            WPGMQ                     SFLPGMQ
+008300200930     A          R WMGCTL                    SFLCTL(WMGSFL)
+008400200930     A                                      SFLSIZ(2)
+008500200930     A                                      SFLPAG(1)
+008600200930     A                                      OVERLAY
+008700200930     A  10                                  SFLINZ
+008800200930     A                                      SFLDSP
+008900200930     A                                      SFLDSPCTL
+009000200930     A  09                                  SFLEND
+009100200930     A            WPGMQ                     SFLPGMQ

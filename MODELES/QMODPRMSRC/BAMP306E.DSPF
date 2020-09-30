@@ -1,0 +1,131 @@
+000100170421     A*%%TS  SD  20150713  134652  DEVOD       REL-V6R1M0  5761-WDS
+000200170421     A*%%EC
+000300170421     A                                      DSPSIZ(24 80 *DS3)
+000400170421     A                                      MSGLOC(24)
+000500170421     A                                      PRINT
+000600170421     A                                      HLPTITLE('Aide générale sur PGMF01')
+000700170421     A                                      HLPPNLGRP(PGMF01 PGMF01)
+000800170421     A                                      INDARA
+000900170421     A                                      ALTHELP(CA01)
+001000170421     A                                      HELP
+001100170421     A          R SFL01                     SFL
+001200170421     A  08                                  SFLNXTCHG
+001300170421     A            ZOPT           1   B  9  3
+001400170421     A  20                                  DSPATR(PR)
+001500170421     A                                      CHECK(ER)
+001600170421     A            ZOCLIEN   R        O  9 16REFFLD(EREPF/OCLIEN BERET/EREPP)
+001700170421     A            HNREC         10  0H
+001800170421     A            HTUPDATE       1   H
+001900170421     A            HFREQUENCE     1   H
+002000170421     A            ZCODCLI   R        O  9  6REFFLD(EREPF/CODCLI BERET/EREPP)
+002100170421     A            ZFREQUENCE    12   O  9 49
+002200170421     A            ZPCHSOUM        L  B  9 66ALIAS(PROCHAINE_SOUMISSION)
+002300170421     A                                      DATFMT(*EUR)
+002400170421     A                                      TEXT('Date de prochaine soumission')
+002500170421     A  02                                  DSPATR(PR)
+002600170421     A N02                                  DSPATR(PC)
+002700170421     A                                      MAPVAL(('01.01.0001' *BLANK))
+002800170421     A          R FORE1                     SFLCTL(SFL01)
+002900170421     A                                      RTNCSRLOC(&WLICSR &WZOCSR &WPRCSR)
+003000170421     A                                      OVERLAY
+003100170421     A                                      PUTOVR
+003200170421     A N07                                  ROLLUP(02)
+003300170421     A                                      CSRLOC(WLIGN WCOLN)
+003400170421     A                                      CHANGE(91)
+003500170421     A N04                                  ERASE(SFL01)
+003600170421     A  04                                  SFLDSP
+003700170421
+003800170421     A  05                                  SFLDSPCTL
+003900170421     A  06                                  SFLCLR
+004000170421     A  07                                  SFLEND
+004100170421     A                                      SFLSIZ(15)
+004200170421     A                                      SFLPAG(14)
+004300170421     A                                      SFLCSRRRN(&WRACSR)
+004400170421     A                                      CA03
+004500170421     A                                      CF05
+004600170421     A                                      CF12
+004700170421     A            WRACSR         5S 0H
+004800170421     A            WRAN01         4S 0H      SFLRCDNBR
+004900170421     A            ZPGM          10   O  1  2
+005000170421     A                                      OVRDTA
+005100170421     A                                  1 31'Paramètrage client'
+005200170421     A                                      COLOR(WHT)
+005300170421     A            ZUSER         10   O  1 70
+005400170421     A                                      OVRDTA
+005500170421     A            ZDATE          8  0O  2  2
+005600170421     A                                      EDTWRD('  /  /    ')
+005700170421     A                                      OVRDTA
+005800170421     A            ZHEUR          6  0O  2 14
+005900170421     A                                      EDTWRD('  :  :  ')
+006000170421     A                                      OVRDTA
+006100170421     A            ZJOB          10   O  2 70
+006200170421     A                                      OVRDTA
+006300170421     A                                  4  3'Indiquez vos options, puis appuyez-
+006400170421     A                                       sur ENTREE.'
+006500170421     A                                      COLOR(BLU)
+006600170421     A                                  5  3'2=Modifier  4=Supprimer  H=Hebdoma-
+006700170421     A                                      daire  M=Mensuel'
+006800170421     A                                      COLOR(BLU)
+006900170421     A                                  6  3'Selection par nom :'
+007000170421     A            ZSNOM         35   B  6 23
+007100170421     A                                      CHECK(LC)
+007200170421     A                                      COLOR(WHT)
+007300170421     A                                      OVRDTA
+007400170421     A                                  7  2'Opt Cd client Raison sociale      -
+007500170421     A                                                   Fréquence        Prch -
+007600170421     A                                      soum'
+007700170421     A                                      COLOR(WHT)
+007800170421     A            WLICSR        10A  H
+007900170421     A            WZOCSR        10A  H
+008000170421     A            WPRCSR         4S 0H
+008100170421     A            WLIGN          3S 0H
+008200170421     A            WCOLN          3S 0H
+008300170421     A                                  2 29'Sondes de température'
+008400170421     A                                      COLOR(WHT)
+008500170421     A            ZOPTC          1   B  8  3
+008600170421     A            ZCODCLIC  R        B  8  6REFFLD(EREPF/CODCLI BERET/EREPP)
+008700170421     A  03                                  DSPATR(RI PC)
+008800170421     A            ZPCHSOUMC       L  B  8 66DATFMT(*EUR)
+008900170421     A                                      MAPVAL(('01.01.0001' *BLANK))
+009000170421     A          R FORB1
+009100170421     A                                      RTNCSRLOC(&WLICSR &WZOCSR &WPRCSR)
+009200170421     A                                      OVERLAY
+009300170421     A                                      PUTOVR
+009400170421     A                                      CSRLOC(WLIGN WCOLN)
+009500170421     A                                      CHANGE(91)
+009600170421     A                                      HLPCLR
+009700170421     A          H                           HLPARA(6 23 6 58)
+009800170421     A                                      HLPPNLGRP('ZSNOM' PGMF01)
+009900170421     A          H                           HLPARA(8 2 22 3)
+010000170421     A                                      HLPPNLGRP('ZOPT' PGMF01)
+010100170421     A                                 23  3'F1=Aide  F3=Sortie  F5=Réafficher -
+010200170421     A                                       F12=Annuler'
+010300170421     A                                      COLOR(BLU)
+010400170421     A            WLICSR        10A  H
+010500170421     A            WZOCSR        10A  H
+010600170421     A            WPRCSR         4S 0H
+010700170421     A            WLIGN          3S 0H
+010800170421     A            WCOLN          3S 0H
+010900170421     A          R WSFMSG                    SFL
+011000170421     A                                      SFLMSGRCD(24)
+011100170421     A            WMGKEY                    SFLMSGKEY
+011200170421     A            WPGMQ                     SFLPGMQ
+011300170421     A          R WSFCTL                    SFLCTL(WSFMSG)
+011400170421     A                                      SFLSIZ(2)
+011500170421     A                                      SFLPAG(1)
+011600170421     A                                      OVERLAY
+011700170421     A  10                                  SFLINZ
+011800170421     A                                      SFLDSP
+011900170421     A                                      SFLDSPCTL
+012000170421     A  09                                  SFLEND
+012100170421     A            WPGMQ                     SFLPGMQ
+012200170421     A*%%RS+<record-sequences>
+012300170421     A*%%RS+ <sequence name="Sans titre">
+012400170421     A*%%RS+  <device type="display" width="80" height="24" />
+012500170421     A*%%RS+  <record-write record-format="FORB1" />
+012600170421     A*%%RS+  <record-write record-format="SFL01" />
+012700170421     A*%%RS+  <record-write record-format="FORE1" />
+012800170421     A*%%RS+  <record-write record-format="WSFMSG" />
+012900170421     A*%%RS+  <record-write record-format="WSFCTL" />
+013000170421     A*%%RS+ </sequence>
+013100170421     A*%%RS </record-sequences>
